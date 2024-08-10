@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-569d7e4dd99618239a97.json",
+					"jsonFile" : "directory-.-Debug-54383fc4dbeba6223f22.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -44,7 +44,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "GymAdmin::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-GymAdmin-Debug-5acaf5b8bcc8a8b50f09.json",
+					"jsonFile" : "target-GymAdmin-Debug-a7d1e06c3c917f2de0a4.json",
 					"name" : "GymAdmin",
 					"projectIndex" : 0
 				},
