@@ -9,8 +9,13 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON) # does not produce the json file
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON CACHE INTERNAL "") # works
+
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
+
+include_directories(${CMAKE_SOURCE_DIR}/Utilities/include)
 
 set(PROJECT_SOURCES
         main.cpp
@@ -24,6 +29,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         person.h person.cpp
+        Utilities/include/debugLogger.h Utilities/src/debugLogger.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET GymAdmin APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
