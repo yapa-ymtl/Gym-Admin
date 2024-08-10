@@ -1,9 +1,0 @@
-# ninja log v5
-36	416	7448114472377320	GymAdmin_autogen/timestamp	ecc8857ec2f36f7c
-36	416	7448114472377320	GymAdmin_autogen/mocs_compilation.cpp	ecc8857ec2f36f7c
-36	416	7448114472377320	C:/myWork/GymAdmin/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/GymAdmin_autogen/timestamp	ecc8857ec2f36f7c
-36	416	7448114472377320	C:/myWork/GymAdmin/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/GymAdmin_autogen/mocs_compilation.cpp	ecc8857ec2f36f7c
-447	3742	7448114547348145	CMakeFiles/GymAdmin.dir/main.cpp.obj	1cbf3f6bbe6a13b5
-1397	5984	7448102586531956	CMakeFiles/GymAdmin.dir/GymAdmin_autogen/mocs_compilation.cpp.obj	21a0e2555dcc6dd1
-459	3911	7448114549206011	CMakeFiles/GymAdmin.dir/mainwindow.cpp.obj	68fe474cbc5e70a0
-3911	4284	7448114553707158	GymAdmin.exe	9be3402c74d474db
