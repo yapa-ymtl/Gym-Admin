@@ -15,20 +15,24 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON CACHE INTERNAL "") # works
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
-include_directories(${CMAKE_SOURCE_DIR}/Utilities/include)
+include_directories(
+    ${CMAKE_SOURCE_DIR}/Utilities/include
+    ${CMAKE_SOURCE_DIR}/Mgr/include
+    ${CMAKE_SOURCE_DIR}/Mgr/UI
+    )
 
 set(PROJECT_SOURCES
         main.cpp
-        mainwindow.cpp
-        mainwindow.h
-        mainwindow.ui
+        Mgr/src/mainwindow.cpp
+        Mgr/include/mainwindow.h
+        Mgr/src/mainwindow.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(GymAdmin
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        person.h person.cpp
+        Mgr/include/person.h Mgr/src/person.cpp
         Utilities/include/debugLogger.h Utilities/src/debugLogger.cpp
     )
 # Define target properties for Android with Qt 6 as:
