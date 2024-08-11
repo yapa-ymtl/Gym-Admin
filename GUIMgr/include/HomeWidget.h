@@ -3,9 +3,11 @@
 
 #include <QWidget>
 
-class HomeWidget {
+class HomeWidget : public QWidget 
+{
+    Q_OBJECT
 public:
-    HomeWidget();
+    HomeWidget(QWidget* parent);
     HomeWidget(HomeWidget &&) = delete;
     HomeWidget(const HomeWidget &) = delete;
     HomeWidget &operator=(HomeWidget &&) = delete;

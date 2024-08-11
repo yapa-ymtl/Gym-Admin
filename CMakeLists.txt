@@ -18,7 +18,7 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 include_directories(
     ${CMAKE_SOURCE_DIR}/Utilities/include
     ${CMAKE_SOURCE_DIR}/Mgr/include
-    ${CMAKE_SOURCE_DIR}/Mgr/UI
+    ${CMAKE_SOURCE_DIR}/GUIMgr/include
     )
 
 set(PROJECT_SOURCES
