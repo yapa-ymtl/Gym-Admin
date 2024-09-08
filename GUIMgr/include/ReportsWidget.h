@@ -12,7 +12,7 @@ public:
     ReportsWidget(const ReportsWidget &) = delete;
     ReportsWidget &operator=(ReportsWidget &&) = delete;
     ReportsWidget &operator=(const ReportsWidget &) = delete;
-    ~ReportsWidget();
+    // ~ReportsWidget();
 
 private:
     

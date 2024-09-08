@@ -12,7 +12,7 @@ public:
     PayementsWidget(const PayementsWidget &) = delete;
     PayementsWidget &operator=(PayementsWidget &&) = delete;
     PayementsWidget &operator=(const PayementsWidget &) = delete;
-    ~PayementsWidget();
+    // ~PayementsWidget();
 
 private:
     

@@ -12,7 +12,7 @@ public:
     MemberWidget(const MemberWidget &) = delete;
     MemberWidget &operator=(MemberWidget &&) = delete;
     MemberWidget &operator=(const MemberWidget &) = delete;
-    ~MemberWidget();
+    // ~MemberWidget();
 
 private:
     

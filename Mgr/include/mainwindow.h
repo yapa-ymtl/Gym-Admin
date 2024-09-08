@@ -2,7 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QTabWidget>
+#include <QStackedWidget>
+#include <QListWidget>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -19,8 +20,12 @@ public:
     ~MainWindow();
 
 private:
-    Ui::MainWindow *ui;
-    QTabWidget* _mainTabWidget;
+    Ui::MainWindow      *ui;
+    QStackedWidget      *_pagesStack;
+    QListWidget         *_pageNamesList;
+
+private slots:
+    void _pageNameClicked(QListWidgetItem *item);
 
 };
 #endif // MAINWINDOW_H

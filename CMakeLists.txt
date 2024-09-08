@@ -34,6 +34,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         ${PROJECT_SOURCES}
         Mgr/include/person.h Mgr/src/person.cpp
         Utilities/include/debugLogger.h Utilities/src/debugLogger.cpp
+        Mgr/src/maintabwidget.h Mgr/src/maintabwidget.cpp Mgr/src/maintabwidget.ui
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET GymAdmin APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

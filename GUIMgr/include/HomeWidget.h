@@ -3,7 +3,11 @@
 
 #include <QWidget>
 
-class HomeWidget : public QWidget 
+namespace Ui {
+class HomeWidget;
+}
+
+class HomeWidget : public QWidget
 {
     Q_OBJECT
 public:
@@ -15,7 +19,7 @@ public:
     ~HomeWidget();
 
 private:
-    
+        Ui::HomeWidget *ui;
 };
 
 #endif // !HOMEWIDGET_H
