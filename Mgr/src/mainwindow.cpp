@@ -1,10 +1,13 @@
-#include "mainwindow.h"
-// #include "maintabwidget.h"
-#include "Mgr/ui_mainwindow.h"
 #include <QStackedWidget>
 #include <QVBoxLayout>
 #include <qcombobox.h>
 #include <QListWidgetItem>
+
+#include "mainwindow.h"
+// #include "maintabwidget.h"
+#include "Mgr/ui_mainwindow.h"
+#include "../../GUIMgr/memberspage.h"
+// #include "../../GUIMgr/homepage.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -17,11 +20,15 @@ MainWindow::MainWindow(QWidget *parent)
     // _mainTabWidget = new MainTabWidget(this);
     // // _mainTabWidget->setTabPosition(QTabWidget::West);
 
+    MembersPage *_membersPage = new MembersPage(this);
     QWidget *firstPageWidget = new QWidget;
+    // HomePage *_homePage = new HomePage(this);
     QWidget *secondPageWidget = new QWidget;
     QWidget *thirdPageWidget = new QWidget;
 
     _pagesStack = new QStackedWidget(this);
+    // _pagesStack->addWidget(_homePage);
+    _pagesStack->addWidget(_membersPage);
     _pagesStack->addWidget(firstPageWidget);
     _pagesStack->addWidget(secondPageWidget);
     _pagesStack->addWidget(thirdPageWidget);
@@ -42,6 +49,11 @@ MainWindow::MainWindow(QWidget *parent)
     firstPageName->setSizeHint(QSize(50, 30));
     firstPageName->setTextAlignment(Qt::AlignHCenter);
 
+    QListWidgetItem *membersPageName = new QListWidgetItem(_pageNamesList);
+    membersPageName->setText(tr("Members"));
+    membersPageName->setSizeHint(QSize(50, 30));
+    membersPageName->setTextAlignment(Qt::AlignHCenter);
+
     QListWidgetItem *secondPageName = new QListWidgetItem(_pageNamesList);
     secondPageName->setText(tr("Second"));
     secondPageName->setTextAlignment(Qt::AlignHCenter);
@@ -56,11 +68,13 @@ MainWindow::MainWindow(QWidget *parent)
     QHBoxLayout *hLayout = new QHBoxLayout(this);
     hLayout->addWidget(_pageNamesList);
     hLayout->addWidget(_pagesStack,1);
+    // hLayout->addWidget(_membersPage,1);
 
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->addLayout(hLayout);
-    mainLayout->addStretch(1);
-    mainLayout->addSpacing(12);
+    // mainLayout->addWidget(_membersPage);
+    // mainLayout->addStretch(1);
+    // mainLayout->addSpacing(12);
 
     setLayout(mainLayout);
 
@@ -73,7 +87,7 @@ void MainWindow::_pageNameClicked(QListWidgetItem *item)
     int index = 0;
     index = _pageNamesList->row(item);
     _pagesStack->setCurrentIndex(index);
-    qDebug() << "clicked";
+    qDebug() << "clicked. INdex : " << index;
 
 }
 
