@@ -2,12 +2,12 @@
 #include <QVBoxLayout>
 #include <qcombobox.h>
 #include <QListWidgetItem>
+#include <QPushButton>
+
 
 #include "mainwindow.h"
-// #include "maintabwidget.h"
 #include "Mgr/ui_mainwindow.h"
 #include "../../GUIMgr/memberspage.h"
-// #include "../../GUIMgr/homepage.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -17,77 +17,78 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    // _mainTabWidget = new MainTabWidget(this);
-    // // _mainTabWidget->setTabPosition(QTabWidget::West);
-
     MembersPage *_membersPage = new MembersPage(this);
     QWidget *firstPageWidget = new QWidget;
     // HomePage *_homePage = new HomePage(this);
     QWidget *secondPageWidget = new QWidget;
     QWidget *thirdPageWidget = new QWidget;
 
-    _pagesStack = new QStackedWidget(this);
-    // _pagesStack->addWidget(_homePage);
-    _pagesStack->addWidget(_membersPage);
-    _pagesStack->addWidget(firstPageWidget);
-    _pagesStack->addWidget(secondPageWidget);
-    _pagesStack->addWidget(thirdPageWidget);
+    // QPushButton *pb1 = new QPushButton(firstPageWidget);
+    // QVBoxLayout *vLayout4first = new QVBoxLayout(firstPageWidget);
+    // vLayout4first->addWidget(pb1);
 
-    _pageNamesList = new QListWidget(this);
+    // firstPageWidget->setLayout(vLayout4first);
+
+    // _pagesStack = new QStackedWidget(this);
+
+    // _pageNamesList = new QListWidget(this);
     // _pageNamesList->setViewMode(QListView::IconMode);
-    _pageNamesList->setIconSize(QSize(96,84));
-    _pageNamesList->setMovement(QListView::Static);
-    _pageNamesList->setSpacing(5);
-    _pageNamesList->setMinimumHeight(1920);
-    _pageNamesList->setMinimumWidth(150);
-    _pageNamesList->setFlow(QListView::TopToBottom);
-    _pageNamesList->setLayoutMode(QListView::SinglePass);
-    _pageNamesList->setSelectionRectVisible(true);
 
-    QListWidgetItem *firstPageName = new QListWidgetItem(_pageNamesList);
-    firstPageName->setText(tr("First"));
-    firstPageName->setSizeHint(QSize(50, 30));
-    firstPageName->setTextAlignment(Qt::AlignHCenter);
+    ui->_pageNamesList->setIconSize(QSize(96,84));
+    ui->_pageNamesList->setMovement(QListView::Static);
+    ui->_pageNamesList->setSpacing(5);
+    // ui->_pageNamesList->setMinimumHeight(1920);
+    ui->_pageNamesList->setMinimumWidth(150);
+    ui->_pageNamesList->setMaximumWidth(250);
+    ui->_pageNamesList->setFlow(QListView::TopToBottom);
+    ui->_pageNamesList->setLayoutMode(QListView::SinglePass);
+    ui->_pageNamesList->setSelectionRectVisible(true);
 
-    QListWidgetItem *membersPageName = new QListWidgetItem(_pageNamesList);
-    membersPageName->setText(tr("Members"));
-    membersPageName->setSizeHint(QSize(50, 30));
-    membersPageName->setTextAlignment(Qt::AlignHCenter);
+    _addNewPage2Stack(_membersPage, "Members");
+    _addNewPage2Stack(firstPageWidget, "First");
+    _addNewPage2Stack(secondPageWidget, "Second");
+    _addNewPage2Stack(thirdPageWidget, "Third");
 
-    QListWidgetItem *secondPageName = new QListWidgetItem(_pageNamesList);
-    secondPageName->setText(tr("Second"));
-    secondPageName->setTextAlignment(Qt::AlignHCenter);
+    ui->_pageNamesList->setCurrentRow(0);
+    ui->_pageStack->setCurrentIndex(0);
 
-    QListWidgetItem *thirdPageName = new QListWidgetItem(_pageNamesList);
-    thirdPageName->setText(tr("Third"));
-    thirdPageName->setTextAlignment(Qt::AlignHCenter);
+    // QHBoxLayout *hLayout = new QHBoxLayout(this);
+    // hLayout->addWidget(_pageNamesList);
+    // hLayout->addWidget(_membersPage,Qt::AlignRight);
+    // // hLayout->addWidget(_membersPage,1);
 
-    _pageNamesList->setCurrentRow(0);
-    _pagesStack->setCurrentIndex(0);
-
-    QHBoxLayout *hLayout = new QHBoxLayout(this);
-    hLayout->addWidget(_pageNamesList);
-    hLayout->addWidget(_pagesStack,1);
-    // hLayout->addWidget(_membersPage,1);
-
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
-    mainLayout->addLayout(hLayout);
+    // QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    // mainLayout->addLayout(hLayout);
     // mainLayout->addWidget(_membersPage);
     // mainLayout->addStretch(1);
     // mainLayout->addSpacing(12);
 
-    setLayout(mainLayout);
+    // setLayout(mainLayout);
+    // setCentralWidget()
 
-    connect(_pageNamesList, &QListWidget::itemClicked,
+    connect(ui->_pageNamesList, &QListWidget::itemClicked,
         this, &MainWindow::_pageNameClicked);
+}
+
+bool MainWindow::_addNewPage2Stack(QWidget *pageWidget_, const QString &pageName_)
+{
+    ui->_pageStack->addWidget(pageWidget_);
+
+    QListWidgetItem *pageNameWidgetItem = new QListWidgetItem(ui->_pageNamesList);
+    pageNameWidgetItem->setText(pageName_);
+    pageNameWidgetItem->setSizeHint(QSize(50, 30));
+    pageNameWidgetItem->setTextAlignment(Qt::AlignHCenter);
+
+    return true;
 }
 
 void MainWindow::_pageNameClicked(QListWidgetItem *item)
 {
     int index = 0;
-    index = _pageNamesList->row(item);
-    _pagesStack->setCurrentIndex(index);
-    qDebug() << "clicked. INdex : " << index;
+    index = ui->_pageNamesList->row(item);
+    ui->_pageStack->setCurrentIndex(index);
+    // _pagesStack->currentWidget()->show();
+    // qDebug() << "clicked. INdex : " ;
 
 }
 

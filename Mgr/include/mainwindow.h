@@ -24,6 +24,7 @@ private:
     QStackedWidget      *_pagesStack;
     QListWidget         *_pageNamesList;
 
+    bool _addNewPage2Stack(QWidget *pageWidget_, const QString &pageName_);
 private slots:
     void _pageNameClicked(QListWidgetItem *item);
 
