@@ -8,6 +8,7 @@
 #include "mainwindow.h"
 #include "Mgr/ui_mainwindow.h"
 #include "../../GUIMgr/memberspage.h"
+#include "../../GUIMgr/homepage.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -18,6 +19,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     MembersPage *_membersPage = new MembersPage(this);
+    HomePage *_homePage = new HomePage(this);
     QWidget *firstPageWidget = new QWidget;
     // HomePage *_homePage = new HomePage(this);
     QWidget *secondPageWidget = new QWidget;
@@ -44,8 +46,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->_pageNamesList->setLayoutMode(QListView::SinglePass);
     ui->_pageNamesList->setSelectionRectVisible(true);
 
+    _addNewPage2Stack(_homePage, "Home");
     _addNewPage2Stack(_membersPage, "Members");
-    _addNewPage2Stack(firstPageWidget, "First");
     _addNewPage2Stack(secondPageWidget, "Second");
     _addNewPage2Stack(thirdPageWidget, "Third");
 

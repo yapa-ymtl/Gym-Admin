@@ -1,24 +1,22 @@
-// #ifndef HOMEPAGE_H
-// #define HOMEPAGE_H
+#ifndef HOMEPAGE_H
+#define HOMEPAGE_H
 
-// #include <QWidget>
+#include <QWidget>
 
-// QT_BEGIN_NAMESPACE
-// namespace Ui {
-// class HomePage;
-// }
-// QT_END_NAMESPACE
+namespace Ui {
+class HomePage;
+}
 
-// class HomePage : public QWidget
-// {
-    // Q_OBJECT
+class HomePage : public QWidget
+{
+    Q_OBJECT
 
-// public:
-    // explicit HomePage(QWidget *parent = nullptr);
-    // ~HomePage();
+public:
+    explicit HomePage(QWidget *parent = nullptr);
+    ~HomePage();
 
-// private:
-    // Ui::HomePage *ui;
-// };
+private:
+    Ui::HomePage *ui;
+};
 
-// #endif // HOMEPAGE_H
+#endif // HOMEPAGE_H

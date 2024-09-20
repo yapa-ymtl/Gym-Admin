@@ -35,8 +35,10 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         Mgr/include/person.h Mgr/src/person.cpp
         Utilities/include/debugLogger.h Utilities/src/debugLogger.cpp
         Mgr/src/maintabwidget.h Mgr/src/maintabwidget.cpp Mgr/src/maintabwidget.ui
-        GUIMgr/homepage.h GUIMgr/homepage.cpp GUIMgr/homepage.ui
+
         GUIMgr/memberspage.h GUIMgr/memberspage.cpp GUIMgr/memberspage.ui
+        GUIMgr/homepage.h GUIMgr/homepage.cpp GUIMgr/homepage.ui
+
 
     )
 # Define target properties for Android with Qt 6 as:

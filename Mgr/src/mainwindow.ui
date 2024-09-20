@@ -21,9 +21,7 @@
        <widget class="QListWidget" name="_pageNamesList"/>
       </item>
       <item>
-       <widget class="QStackedWidget" name="_pageStack">
-        <widget class="QWidget" name="page_2"/>
-       </widget>
+       <widget class="QStackedWidget" name="_pageStack"/>
       </item>
      </layout>
     </item>
@@ -36,7 +34,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>21</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>
