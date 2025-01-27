@@ -15,6 +15,9 @@ public:
     explicit HomePage(QWidget *parent = nullptr);
     ~HomePage();
 
+public slots:
+    void _sAddMemberClicked();
+
 private:
     Ui::HomePage *ui;
 };

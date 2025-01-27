@@ -15,8 +15,12 @@ public:
     explicit MembersPage(QWidget *parent = nullptr);
     ~MembersPage();
 
+public slots:
+    void _sAddMemberClicked();
+
 private:
     Ui::MembersPage *ui;
+
 };
 
 #endif // MEMBERSPAGE_H
