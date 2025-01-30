@@ -43,7 +43,7 @@ jobs:
       run: |
         mkdir build
         cd build
-        cmake -G "Ninja" -DCMAKE_BUILD_TYPE=Release ..
+        qt-cmake -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="C:/Qt/6.7.0/mingw_64" ..
         cmake --build .
 
     - name: Configure and Build (macOS)
@@ -51,7 +51,7 @@ jobs:
       run: |
         mkdir build
         cd build
-        cmake -G "Ninja" -DCMAKE_BUILD_TYPE=Release ..
+        qt-cmake -G "Ninja" -DCMAKE_BUILD_TYPE=Release ..
         cmake --build .
 
     - name: Run Tests
