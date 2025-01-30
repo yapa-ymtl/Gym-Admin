@@ -13,7 +13,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON) # does not produce the json file
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON CACHE INTERNAL "") # works
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Gui Widgets)
 
 include_directories(
     ${CMAKE_SOURCE_DIR}/Utilities/include
@@ -62,8 +62,8 @@ else()
     endif()
 endif()
 
-target_link_libraries(GymAdmin PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
-
+target_link_libraries(GymAdmin PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Core Qt${QT_VERSION_MAJOR}::Gui)
+ 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an
 # explicit, fixed bundle identifier manually though.
