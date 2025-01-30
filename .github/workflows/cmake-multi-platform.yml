@@ -27,6 +27,8 @@ jobs:
         version: 6.7.0
         host: ${{ matrix.os == 'windows-latest' && 'windows' || 'mac' }}
         target: desktop
+        arch: 'x86_64'
+        modules: 'qtbase qttools'
 
     - name: Install Dependencies (Windows)
       if: runner.os == 'Windows'
