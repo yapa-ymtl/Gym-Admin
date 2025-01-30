@@ -9,7 +9,7 @@
 #include "Mgr/ui_mainwindow.h"
 #include "../../GUIMgr/memberspage.h"
 #include "../../GUIMgr/homepage.h"
-#include "../../GUIMgr/paymentpage.h".h"
+#include "../../GUIMgr/paymentpage.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
