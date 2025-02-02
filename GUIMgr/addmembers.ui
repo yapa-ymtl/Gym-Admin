@@ -17,7 +17,7 @@
    <item>
     <widget class="QTabWidget" name="tabWidget">
      <property name="tabShape">
-      <enum>QTabWidget::TabShape::Rounded</enum>
+      <enum>QTabWidget::Rounded</enum>
      </property>
      <property name="currentIndex">
       <number>0</number>
@@ -29,25 +29,8 @@
       <layout class="QVBoxLayout" name="verticalLayout_3">
        <item>
         <layout class="QGridLayout" name="gridLayout_2">
-         <item row="0" column="0">
-          <widget class="QLabel" name="label">
-           <property name="text">
-            <string>Name</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1" colspan="3">
-          <widget class="QLineEdit" name="lineEdit"/>
-         </item>
-         <item row="1" column="0">
-          <widget class="QLabel" name="label_4">
-           <property name="text">
-            <string>Gender</string>
-           </property>
-          </widget>
-         </item>
          <item row="1" column="1">
-          <widget class="QComboBox" name="comboBox">
+          <widget class="QComboBox" name="_cbGender">
            <item>
             <property name="text">
              <string>Male</string>
@@ -65,88 +48,115 @@
            </item>
           </widget>
          </item>
-         <item row="1" column="2" colspan="2">
-          <spacer name="horizontalSpacer_4">
-           <property name="orientation">
-            <enum>Qt::Orientation::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="2" column="0">
-          <widget class="QLabel" name="label_6">
+         <item row="1" column="0">
+          <widget class="QLabel" name="_lblGender">
            <property name="text">
-            <string>Phone number</string>
+            <string>Gender</string>
            </property>
           </widget>
          </item>
-         <item row="2" column="1" colspan="3">
-          <widget class="QLineEdit" name="lineEdit_4"/>
-         </item>
-         <item row="3" column="0">
-          <widget class="QLabel" name="label_7">
+         <item row="0" column="0">
+          <widget class="QLabel" name="_lblName">
            <property name="text">
-            <string>Email</string>
+            <string>Name</string>
            </property>
           </widget>
          </item>
-         <item row="3" column="1" colspan="3">
-          <widget class="QLineEdit" name="lineEdit_3"/>
-         </item>
-         <item row="4" column="0">
-          <widget class="QLabel" name="label_8">
-           <property name="text">
-            <string>Emergency Contact Number</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="1" colspan="3">
-          <widget class="QLineEdit" name="lineEdit_2"/>
-         </item>
-         <item row="5" column="0">
-          <widget class="QLabel" name="label_3">
-           <property name="text">
-            <string>Date of Birth</string>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="1" colspan="2">
-          <widget class="QDateEdit" name="dateEdit"/>
-         </item>
-         <item row="5" column="3">
-          <spacer name="horizontalSpacer_5">
-           <property name="orientation">
-            <enum>Qt::Orientation::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="6" column="0">
-          <widget class="QLabel" name="label_5">
+         <item row="7" column="0">
+          <widget class="QLabel" name="_lblAdress">
            <property name="text">
             <string>Adress</string>
            </property>
           </widget>
          </item>
-         <item row="6" column="1" colspan="3">
-          <widget class="QTextEdit" name="textEdit"/>
+         <item row="5" column="1" colspan="3">
+          <widget class="QLineEdit" name="_leEmergency"/>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="_lblEmergency">
+           <property name="text">
+            <string>Emergency Contact Number</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="1" colspan="3">
+          <widget class="QTextEdit" name="_teAdress"/>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="_lblPhoneNumber">
+           <property name="text">
+            <string>Phone number</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="_lblEmail">
+           <property name="text">
+            <string>Email</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="3">
+          <spacer name="horizontalSpacer_5">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="1" column="2" colspan="2">
+          <spacer name="horizontalSpacer_4">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="3" column="1" colspan="3">
+          <widget class="QLineEdit" name="_leEmail"/>
+         </item>
+         <item row="6" column="1" colspan="2">
+          <widget class="QDateEdit" name="_deDOB"/>
+         </item>
+         <item row="0" column="1" colspan="3">
+          <widget class="QLineEdit" name="_leName"/>
+         </item>
+         <item row="6" column="0">
+          <widget class="QLabel" name="_lblDOB">
+           <property name="text">
+            <string>Date of Birth</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="_lblNIC">
+           <property name="text">
+            <string>NIC</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QLineEdit" name="_leNIC"/>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="_lePhoneNumber"/>
          </item>
         </layout>
        </item>
        <item>
         <spacer name="verticalSpacer">
          <property name="orientation">
-          <enum>Qt::Orientation::Vertical</enum>
+          <enum>Qt::Vertical</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
@@ -214,7 +224,7 @@
          <item row="2" column="2">
           <spacer name="horizontalSpacer_2">
            <property name="orientation">
-            <enum>Qt::Orientation::Horizontal</enum>
+            <enum>Qt::Vertical</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
@@ -258,7 +268,7 @@
          <item row="4" column="2">
           <spacer name="horizontalSpacer_3">
            <property name="orientation">
-            <enum>Qt::Orientation::Horizontal</enum>
+            <enum>Qt::Vertical</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
@@ -273,7 +283,7 @@
        <item>
         <spacer name="verticalSpacer_2">
          <property name="orientation">
-          <enum>Qt::Orientation::Vertical</enum>
+          <enum>Qt::Vertical</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
@@ -299,7 +309,7 @@
      <item>
       <spacer name="horizontalSpacer">
        <property name="orientation">
-        <enum>Qt::Orientation::Horizontal</enum>
+        <enum>Qt::Vertical</enum>
        </property>
        <property name="sizeHint" stdset="0">
         <size>
@@ -311,11 +321,8 @@
      </item>
      <item>
       <widget class="QDialogButtonBox" name="buttonBox">
-       <property name="orientation">
-        <enum>Qt::Orientation::Horizontal</enum>
-       </property>
        <property name="standardButtons">
-        <set>QDialogButtonBox::StandardButton::Cancel|QDialogButtonBox::StandardButton::Ok</set>
+        <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
        </property>
       </widget>
      </item>
@@ -331,38 +338,5 @@
   </layout>
  </widget>
  <resources/>
- <connections>
-  <connection>
-   <sender>buttonBox</sender>
-   <signal>rejected()</signal>
-   <receiver>AddMembers</receiver>
-   <slot>reject()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>316</x>
-     <y>260</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>286</x>
-     <y>274</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>buttonBox</sender>
-   <signal>accepted()</signal>
-   <receiver>AddMembers</receiver>
-   <slot>accept()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>248</x>
-     <y>254</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>157</x>
-     <y>274</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

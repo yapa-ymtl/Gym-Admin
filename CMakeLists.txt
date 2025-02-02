@@ -41,6 +41,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         GUIMgr/paymentpage.h GUIMgr/paymentpage.cpp GUIMgr/paymentpage.ui
         GUIMgr/addmembers.h GUIMgr/addmembers.cpp GUIMgr/addmembers.ui
         DBMgr/dbmgr.h DBMgr/dbmgr.cpp
+        GUIMgr/utility.h GUIMgr/utility.cpp
+        Utilities/settingsmgr.h Utilities/settingsmgr.cpp
 
 
     )
